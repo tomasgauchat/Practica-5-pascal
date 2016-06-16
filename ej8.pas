@@ -1,20 +1,30 @@
 program ej8;
+uses crt;
 var minimo: integer;
     vueltas: integer;
-    contador: integer;
+    contador: Integer;
     numero: integer;
-
+    b: Boolean; 
 begin
-contador:= 2;
 readln(vueltas);
   readln(numero);
   minimo:= numero;
   readln(numero);
-  while (minimo < numero) and (contador < vueltas) do
+  contador:= 2;
+  b:= minimo < numero;
+   while (b) and (vueltas > contador) do
     begin
-      contador := contador + 1;
+      contador:= contador + 1;
       readln(numero);
-      if  then
+      b:= minimo < numero;
     end;
-  
-end.
+  if b then
+      begin
+      writeln('el primer numero es el minimo');
+      end
+      else
+      begin
+      writeln('el primer numero no es el minimo');
+      end; 
+  readkey();
+ end.
