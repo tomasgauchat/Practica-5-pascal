@@ -1,4 +1,7 @@
 program ejdos;
+
+uses crt;
+
 var cantidad : integer;
 numero : integer;
 i : integer;
@@ -8,12 +11,11 @@ begin
    readln(cantidad);
    readln(numero);
    acumulador := numero;
-   for i := 1 to cantidad-2 do
-    
-        begin
-                readln(numero);
-                writeln(acumulador-numero);
-                acumulador := numero;        
-        end;
+   for i := 2 to cantidad do
+   begin
         readln(numero);
+        writeln(acumulador-numero);
+        acumulador := numero;        
+   end;
+   readkey();
 end.
