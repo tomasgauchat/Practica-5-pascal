@@ -16,7 +16,7 @@ begin
         readln(a);
         readln(b);
         readln(c);
-        contador:= 0;
+        contador:= 3;
  for i:= 1 to vueltas-2 do
        begin
        contador:= contador + 1;
@@ -48,17 +48,14 @@ begin
                 else
                     begin
                     writeln('hay 2 o mas numeros iguales');
-                    
-                    
                     end;
-                
-                
-                
                 end;
         a:=b;
         b:=c;
-        readln(c);        
-       
+        if contador <= vueltas then
+          begin
+          readln(c);        
+          end;
        
        
        
