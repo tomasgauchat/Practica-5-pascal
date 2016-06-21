@@ -3,18 +3,19 @@ var numero : integer;
     minimo : Integer;
     
 begin
-readln(numero);
-minimo := 0;
-minimo := numero;
+    readln(numero);
+    //minimo := 0;
+    minimo := numero;
     while (numero <> 0) and (minimo <= numero) do
-       begin
-         readln(numero);
-       end; 
+    begin
+      readln(numero);
+    end; 
+
     if numero = 0 then
-        begin
-          write(minimo);
-          writeln(' Es el mas chico');
-        end
+    begin
+        write(minimo);
+        writeln(' Es el mas chico');
+    end
     else
     begin
       write(minimo);

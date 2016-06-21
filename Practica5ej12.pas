@@ -1,15 +1,26 @@
+
 program ej12;
 var ultimo : integer;
     anteultimo : integer;
     numero : integer;
 
 begin
-ultimo := 0;
-anteultimo := 0;
-
 
 readln(numero);
 
+if numero = 0 then
+        exit;
+
+readln(numero);
+
+if numero = 0 then
+        exit;
+
+
+ultimo := 0;
+anteultimo := 0;
+
+readln(numero);
 
 if numero <> 0 then
 begin

@@ -4,7 +4,7 @@ var numero : integer;
 
 begin
   readln(numero);
-  while (numero <> 0) and (numero > 0 ) do
+  while  (numero > 0 ) do
     begin
     readln(numero);
     end;
