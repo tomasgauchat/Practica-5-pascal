@@ -8,13 +8,15 @@ begin
 
 readln(numero);
 
-if numero = 0 then
-        exit;
+if numero <> 0 then
+begin
+      readln(numero);
+      if numero<> 0 then
+        begin
+          //codigo programa
+        end;  
+end;
 
-readln(numero);
-
-if numero = 0 then
-        exit;
 
 
 ultimo := 0;
