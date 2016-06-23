@@ -17,7 +17,20 @@ begin
       
       if numero<> 0 then
         begin
-         while (numero <> 0) and (ultimo <> 0) do
+        
+        if numero < ultimo then
+          begin
+                anteultimo := numero;
+          End
+          else
+          begin
+                anteultimo := ultimo;
+                ultimo := numero;
+          end;
+        
+        ReadLn(numero);
+
+         while (numero <> 0) do
                 begin
                         if numero > ultimo then
                                 begin
@@ -33,34 +46,17 @@ begin
                                 end; //if numero<> 0 then
                         readln(numero);
                 end; //while (numero <> 0) and (ultimo <> 0) do
+        
+                WriteLn(ultimo, anteultimo);
+        end
+        else
+        begin
+                writeln('No hay un segundo numero'); 
         end; //if numero<> 0 then
-end; //if numero <> 0 then
-
-if ultimo <> 0 then
-begin
-        write('El numero mas grande es ');
-        writeln(ultimo);
-        if anteultimo <> 0 then
-                begin
-                        Write('El segundo numero mas grande es ');
-                        writeln(anteultimo);
-                end
-                else
-                begin
-                        writeln('No hay un segundo numero');  
-                end; // if anteultimo <> 0 then
 end
 else
 begin
-        if anteultimo <> 0 then
-                begin
-                        write('El numero mas grande es ');
-                        writeln(anteultimo);
-                end
-                else
-                begin
-                        WriteLn('No hay numeros en su conjunto');
-                end; //if anteultimo <> 0 then
-end; //if ultimo <> 0 then
+        WriteLn('No hay numeros en su conjunto');
+end; //if numero <> 0 then
 
 end.
