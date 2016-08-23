@@ -159,7 +159,7 @@ begin
                   end
                  else
                  begin
-if j => 10 then
+if j > 10 then
   
                   begin
                     array_3[k]:= array_1[i];
