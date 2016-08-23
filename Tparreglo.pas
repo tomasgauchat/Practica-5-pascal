@@ -36,7 +36,7 @@ end;
 procedure asignar_valores_array_1();
 var i, numero_aleatorio :integer;
 begin
-    //randomize(); //habilitar para generar en cada ejecuciÃ³n una lista distinta de nÃºmeros.
+    randomize(); //habilitar para generar en cada ejecuciÃ³n una lista distinta de nÃºmeros.
     i := 1;
     while i <= array_1_len do
     begin
@@ -52,7 +52,7 @@ end;
 procedure asignar_valores_array_2();
 var i, numero_aleatorio :integer;
 begin
-    //randomize(); //habilitar para generar en cada ejecuciÃ³n una lista distinta de nÃºmeros.
+    randomize(); //habilitar para generar en cada ejecuciÃ³n una lista distinta de nÃºmeros.
     i := 1;
     while i <= array_2_len do
     begin
@@ -141,48 +141,23 @@ begin
 c3:=C3+1;
 end;//while c1<10 and c2<15 do
 
-for i:= 1 to 25 do
-  begin
-  writeln(array_3[i]); 
-  end;
-{writeln(c1);
-writeln(c2);}
-writeln('hasta aca acomoda los 2 arreglos');
-readkey();
+while c1<=15 do
+    begin
+    array_3[c3] := array_1[c1];
+    c3 := c3+1;
+    c1 := c1+1; 
+    end; //while c1<15 do
 
-{While (C1<15) or (c2<10) do
+while c2<=10 do
 begin
-      If c1=15 then
-      begin
-        array_3[c3] := array_2[c2];
-        C2:=C2+1;
-      end // If c1=15 do
-    else
-      begin
-        array_3[c3] :=array_1[c1];
-        c1:=c1+1;
-      end;// If c1=15 do
-c3:= c3+1;
-end;//While C1 < 15 or c2<10 do} 
+    array_3[c3] := array_2[c2];
+    c3 := c3+1;
+    c2 := c2+1;
+end;//while c2<10 do
 
-if c1 >= 15 then
-  begin
-        while c2<=10 do
-        begin
-          array_3[c3] := array_2[c2];
-          c3 := c3+1;
-          c2 := c2+1;
-        end;//while c2<10 do
-  end
-  else
-  begin
-        while c1<=15 do
-          begin
-           array_3[c3] := array_1[c1];
-           c3 := c3+1;
-           c1 := c1+1; 
-          end; //while c1<15 do
-  end; //if c1 = 15 then
+
+
+
 for i:= 1 to 25 do
   begin
   writeln(array_3[i]); 
